@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="<?php echo ($seo_keywords); ?>"/>
-    <meta name="description" content="<?php echo ($seo_description); ?>"/>
+    <meta name="keywords" content="<?php echo ($seo_keywords); ?>" />
+    <meta name="description" content="<?php echo ($seo_description); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport"
@@ -95,22 +95,24 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
-                            <?php if($r['title']!=11) : ?>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="contant">
-                                        <div class="title ani" swiper-animate-effect="slideInLeft"
-                                            swiper-animate-delay="0.2s"><?php echo ($r["title"]); ?></div>
-                                        <p class="ani" swiper-animate-effect="slideInLeft" swiper-animate-delay="0.2s">
-                                            <?php echo ($r["description"]); ?><br /></p>
-                                        <a class="ani" swiper-animate-effect="slideInLeft" swiper-animate-delay="0.2s"
-                                            href="contact">Contact Us</a>
+                                <?php if($r['title']!=11) : ?>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="contant">
+                                            <div class="title ani" swiper-animate-effect="slideInLeft"
+                                                swiper-animate-delay="0.2s"><?php echo ($r["title"]); ?></div>
+                                            <p class="ani" swiper-animate-effect="slideInLeft"
+                                                swiper-animate-delay="0.2s">
+                                                <?php echo ($r["description"]); ?><br /></p>
+                                            <a class="ani" swiper-animate-effect="slideInLeft"
+                                                swiper-animate-delay="0.2s" href="contact">Contact Us</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <?php endif;?>
-                            <a href="<?php echo ($r["link"]); ?>" target="_blank" title="<?php echo ($r["title"]); ?>"> <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>"></a>
-                        </div><?php endforeach; endif;?>
+                                <?php endif;?>
+                                <a href="<?php echo ($r["link"]); ?>" target="_blank" title="<?php echo ($r["title"]); ?>"> <img src="<?php echo ($r["pic"]); ?>"
+                                        alt="<?php echo ($r["title"]); ?>"></a>
+                            </div><?php endforeach; endif;?>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-btn">
@@ -125,8 +127,9 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <?php  $_result=M("slide_data")->field("*")->where("fid = 2 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
-                            <a href="<?php echo ($r["link"]); ?>" target="_blank" title="<?php echo ($r["title"]); ?>"> <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>"></a>
-                        </div><?php endforeach; endif;?>
+                                <a href="<?php echo ($r["link"]); ?>" target="_blank" title="<?php echo ($r["title"]); ?>"> <img src="<?php echo ($r["pic"]); ?>"
+                                        alt="<?php echo ($r["title"]); ?>"></a>
+                            </div><?php endforeach; endif;?>
 
                     </div>
                     <div class="swiper-pagination"></div>
@@ -147,19 +150,19 @@
                         <div class="pro-box clearfix" style="margin: 50px 0;">
                             <div class="left col-lg-6 col-md-6">
                                 <?php  $_result=M("Product")->field("thumb,title,cont,listorder,id")->where(" 1  AND status=1  AND catid=73")->order("listorder desc")->limit("12")->select();; if ($_result): $i=0;foreach($_result as $key=>$r):++$i;$mod = ($i % 2 );?><div class="diflex clearfix">
-                                    <div class="img col-lg-6 col-md-6">
-                                        <img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>">
-                                    </div>
-                                    <div class="txt col-lg-6 col-md-6">
-                                        <div class="box">
-                                            <?php echo ($r["cont"]); ?>
+                                        <div class="img col-lg-6 col-md-6">
+                                            <img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>">
                                         </div>
-                                    </div>
-                                </div><?php endforeach; endif;?>
+                                        <div class="txt col-lg-6 col-md-6">
+                                            <div class="box">
+                                                <?php echo ($r["cont"]); ?>
+                                            </div>
+                                        </div>
+                                    </div><?php endforeach; endif;?>
                             </div>
 
                             <div class="video col-lg-6 col-md-6">
-                               <?php getcatvar('page','id = 111','cont');?>
+                                <?php getcatvar('page','id = 111','cont');?>
                             </div>
                         </div>
 
@@ -174,8 +177,8 @@
             <div class="advantage">
                 <div class="container">
                     <div class="row">
-                        
-<?php getcatvar('page','id = 108','cont');?>
+
+                        <?php getcatvar('page','id = 108','cont');?>
                     </div>
                 </div>
             </div>
@@ -209,8 +212,8 @@
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <?php  $_result=M("Article")->field("thumb,title,listorder,id")->where(" 1  AND status=1  AND catid=110")->order("listorder desc")->limit("120")->select();; if ($_result): $i=0;foreach($_result as $key=>$r):++$i;$mod = ($i % 2 );?><div class="swiper-slide">
-                                           <img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>">
-                                        </div><?php endforeach; endif;?>  
+                                                <img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>">
+                                            </div><?php endforeach; endif;?>
                                     </div>
                                     <div class="swiper-pagination"></div>
 
@@ -230,23 +233,12 @@
                     <div class="row">
                         <h3>Partner</h3>
                         <div class="titles">We have 3.0 Pioneer Mask Production Machine</div>
-                        <div style="position: relative;">
+
+                        <!-- pc -->
+                        <div class="pc-partner" style="position: relative; padding: 30px 0;">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="box clearfix">
-                                            <?php  $_result=M("Case")->field("thumb,title,listorder,id")->where(" 1  AND status=1  AND catid=77")->order("listorder desc")->limit("120")->select();; if ($_result): $i=0;foreach($_result as $key=>$r):++$i;$mod = ($i % 2 );?><div class="img  col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                                <div class="box-img"><img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>"></div>
-                                            </div><?php endforeach; endif;?>
-                                        </div>
-                                    </div>
-<!--                                    <div class="swiper-slide">
-                                        <div class="box clearfix">
-                                            <?php  $_result=M("Case")->field("thumb,title,listorder,id")->where(" 1  AND status=1  AND catid=77")->order("listorder desc")->limit("120")->select();; if ($_result): $i=0;foreach($_result as $key=>$r):++$i;$mod = ($i % 2 );?><div class="img  col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                                                <div class="box-img"><img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>"></div>
-                                            </div><?php endforeach; endif;?>
-                                        </div>
-                                    </div>-->
+                                    <?php  $_result=M("Case")->field("thumb,title,listorder,id")->where(" 1  AND status=1  AND catid=77")->order("listorder desc")->limit("120")->select();; if ($_result): $i=0;foreach($_result as $key=>$r):++$i;$mod = ($i % 2 );?><div class="swiper-slide"><img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>"></div><?php endforeach; endif;?>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
@@ -254,7 +246,15 @@
                             <div class="swiper-button-next"></div>
                         </div>
 
-
+                        <!-- wap -->
+                        <div class="wap-partner">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <?php  $_result=M("Case")->field("thumb,title,listorder,id")->where(" 1  AND status=1  AND catid=77")->order("listorder desc")->limit("120")->select();; if ($_result): $i=0;foreach($_result as $key=>$r):++$i;$mod = ($i % 2 );?><div class="swiper-slide"><img src="<?php echo ($r["thumb"]); ?>" alt="<?php echo ($r["title"]); ?>"></div><?php endforeach; endif;?>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -276,11 +276,13 @@
                                 <li><?php echo ($guhua); ?></li>
                                 <li>+86 <?php echo ($yidong); ?></li>
                                 <li><?php echo ($qq); ?></li>
-                                <li><?php echo ($email); ?></li>
+                                <li><a href="mailto:<?php echo ($email); ?>" target="_blank" class="emails">
+                                        <?php echo ($email); ?></a></li>
                             </ul>
                         </div>
                         <div class="form col-lg-6 col-md-6">
-                            <form name="form" method="post" onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
+                            <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                                action="index.php?g=Home&a=message">
                                 <div class="box clearfix">
                                     <div class="box-left col-lg-4 col-md-4">
                                         <p>Name <span> *</span></p>

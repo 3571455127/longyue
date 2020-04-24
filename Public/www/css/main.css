@@ -286,6 +286,11 @@ header .navbar-fixed-top .navbar-nav>li>a {
     padding: 19.5px 20px;
 }
 
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #189de0;
+}
+
 /* banner */
 .index .banner .swiper-slide {
     position: relative;
@@ -474,7 +479,7 @@ header .navbar-fixed-top .navbar-nav>li>a {
     border: 1px solid #189de0;
     border-radius: 6px;
     font-size: 16px;
-    width: 64%;
+    width: 260px;
     background: url("../images/download.png")no-repeat;
     background-position: 10px center;
     cursor: pointer;
@@ -658,8 +663,13 @@ header .navbar-fixed-top .navbar-nav>li>a {
     padding: 30px 0;
 }
 
-.index .partner .swiper-container {
-    padding: 30px 0;
+.index .partner .pc-partner .swiper-container {
+    height: 300px;
+
+}
+
+.index .partner .pc-partner .swiper-slide {
+    height: 140px;
 }
 
 .index .partner .img {
@@ -714,6 +724,10 @@ header .navbar-fixed-top .navbar-nav>li>a {
     background-color: #fff;
 }
 
+.index .partner .wap-partner {
+    display: none;
+}
+
 /* contact */
 
 footer {
@@ -759,6 +773,10 @@ footer .details ul li:nth-child(5) {
 footer .details ul li:nth-child(6) {
     background: url("../images/footer-email.png")no-repeat;
     background-position: left top;
+}
+
+footer .details ul li .emails {
+    color: #fff;
 }
 
 footer form .box {
@@ -817,7 +835,6 @@ footer form .submit-btn {
 
 /* 响应式 */
 
-
 @media screen and (max-width:1920px) {
 
     .thank {
@@ -845,19 +862,11 @@ footer form .submit-btn {
     .index .product .video-box iframe {
         height: 575px;
     }
-
-    .index .product .pro-box .pro-down {
-        width: 80%;
-    }
 }
 
 @media screen and (max-width:1400px) {
     .index .product .video-box iframe {
         height: 475px;
-    }
-
-    .index .product .pro-box .pro-down {
-        width: 100%;
     }
 }
 
@@ -956,16 +965,19 @@ footer form .submit-btn {
 
     .index .advantage .list .list-box:nth-child(2) .txt {
         line-height: 1.4;
-        font-size: 18px;
+        font-size: 16px;
         min-height: 66px;
     }
 
     .index .advantage .list .list-box:nth-child(1) .txt {
         line-height: 50px;
-        font-size: 18px;
+        font-size: 16px;
         min-height: 66px;
     }
 
+    .index .advantage .list .list-box p {
+        height: 284px;
+    }
 
     .index .advantage p,
     .index .product .pro-box .txt h6 {
@@ -1018,8 +1030,8 @@ footer form .submit-btn {
 
     .index .product .pro-box .pro-down {
         margin-top: 10px;
-        width: 80%;
-        margin-right: 10%;
+        /* width: 80%; */
+        margin-right: 5%;
     }
 
     .index .product .video .video-box:nth-child(1) {
@@ -1035,7 +1047,39 @@ footer form .submit-btn {
         width: 320px;
         height: 250px;
     }
-    .index .partner .swiper-container{
+
+    .index .partner .swiper-container {
         padding: 10px 0 0 0;
+    }
+
+    .index .partner .swiper-container {
+        padding: 15px 0;
+    }
+
+    .index .partner .wap-partner {
+        display: block;
+        padding: 0 15px;
+    }
+
+    .index .partner .swiper-container-horizontal>.swiper-pagination-bullets,
+    .index .partner .swiper-pagination-custom,
+    .index .partner .swiper-pagination-fraction {
+        bottom: -4px
+    }
+
+    .index .partner .pc-partner {
+        display: none;
+    }
+
+    .index .advantage .box {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .index .certificate .swiper-container {
+        padding-bottom: 0;
+    }
+
+    .index .partner {
+        padding-top: 0;
     }
 }

@@ -2,16 +2,17 @@ $(function () {
 
 
     // Partner
-    var mySwiper = new Swiper('.partner .swiper-container', {
-        loop: true,
-        speed: 1200,
-        pagination: {
-            el: '.partner .swiper-pagination',
-            clickable: true,
-        },
+    var mySwiper = new Swiper('.pc-partner .swiper-container', {
+        spaceBetween: 20,
+        slidesPerView: 4,
+        slidesPerColumn: 2,
         navigation: {
-            nextEl: '.partner .swiper-button-next',
-            prevEl: '.partner .swiper-button-prev',
+            nextEl: '.pc-partner .swiper-button-next',
+            prevEl: '.pc-partner .swiper-button-prev',
+        },
+        pagination: {
+            el: '.pc-partner .swiper-pagination',
+            clickable: true,
         },
     })
 
@@ -28,6 +29,18 @@ $(function () {
         },
     })
 
+    // wap-partner
+    var mySwiper = new Swiper('.wap-partner .swiper-container', {
+        loop: true,
+        autoplay: true,
+        speed: 1200,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: '.wap-partner .swiper-pagination',
+            clickable: true,
+        },
+    })
     // wap右上导航
     $(".nav li").click(function () {
         $(this).parent().parent().removeClass("in");
