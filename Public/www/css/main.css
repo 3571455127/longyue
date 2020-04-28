@@ -439,7 +439,7 @@ header .navbar-fixed-top .navbar-nav>li>a {
 
 /* product  */
 .index .product {
-    padding: 30px 0;
+    padding-top: 30px;
 }
 
 .index .product .pro-box .left,
@@ -496,7 +496,7 @@ header .navbar-fixed-top .navbar-nav>li>a {
 
 /* advantage */
 .index .advantage {
-    margin: 30px 0;
+    /* margin: 30px 0; */
     background: url("../images/advantage-bg.png")no-repeat;
 }
 
@@ -953,6 +953,7 @@ footer form .submit-btn {
 
     .index .advantage {
         background-size: cover;
+        padding: 15px 0;
     }
 
     .index .advantage .list {
