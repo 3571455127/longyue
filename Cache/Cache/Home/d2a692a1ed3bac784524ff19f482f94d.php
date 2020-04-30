@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="__PUBLIC__/www/css/swiper.min.css">
 
     <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/jquery.fancybox.min.css">
 
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
 
@@ -53,6 +54,7 @@
     <script src="__PUBLIC__/www/js/swiper.animate.min.js"></script>
 
     <script src="__PUBLIC__/www/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/www/js/jquery.fancybox.min.js"></script>
 
     <script src="__PUBLIC__/www/js/main.js"></script>
 
@@ -206,7 +208,7 @@
                                                 <?php echo ($r["description"]); ?><br /></p>
 
                                             <a class="ani" swiper-animate-effect="slideInLeft"
-                                                swiper-animate-delay="0.2s" href="contact">Contact Us</a>
+                                                swiper-animate-delay="0.2s" href="#contact">Contact Us</a>
 
                                         </div>
 
@@ -316,8 +318,23 @@
 
 
                             <div class="video col-lg-6 col-md-6">
+                                <!-- <?php getcatvar('page','id = 111','cont');?> -->
 
-                                <?php getcatvar('page','id = 111','cont');?>
+                                <div class="video-box main_page col-lg-12">
+                                    <a data-fancybox="gallery" href="https://youtu.be/TFfBt7aJCl8">
+                                        <img class="img-responsive" src="__PUBLIC__/www/images/video-bg1.jpg" alt="">
+                                        <span></span>
+                                    </a>
+                                </div>
+                                <div class="video-box main_page col-lg-12">
+                                    <a data-fancybox="gallery" href="https://youtu.be/xcfOthpQuIY">
+                                        <img class="img-responsive" src="__PUBLIC__/www/images/video-bg2.jpg" alt="">
+                                        <span></span>
+                                    </a>
+                                </div>
+
+
+
 
                             </div>
 
